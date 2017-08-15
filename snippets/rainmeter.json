@@ -1,0 +1,167 @@
+{
+    "Rainmeter": {
+        "prefix": "rainmeter",
+        "body": [
+            "[Rainmeter]",
+            "update = $1",
+            "accurateText = ${2|0,1|}",
+            "dynamicWindowSize = ${3|0,1|}",
+            "",
+            "$0"
+        ]
+    },
+
+    "Meta": {
+        "prefix": "metadata",
+        "body": [
+            "[Metadata]",
+            "name = $1",
+            "author = $2",
+            "information = $3",
+            "version = $4",
+            "license = $5",
+            "",
+            "$0"
+        ],
+        "description": "Creates the metadata section."
+    },
+
+    "MeterStyle": {
+        "prefix": "meterstyle",
+        "body": [
+            "[${1:name}]",
+            "antiAlias = ${2|0,1|}",
+            "hidden = ${3|0,1|}",
+            "padding = ${4:left},${5:top},${6:right},${7:bottom}"
+        ]
+    },
+
+    "Meter": {
+        "prefix": "meter",
+        "body": [
+            "[${1:name}]",
+            "meter = ${2|Bar,Bitmap,Button,Histogram,Image,Line,Rotator,Roundline,Shape,String|}",
+            "x = ${3:x}",
+            "y = ${4:y}",
+            "w = ${5:w}",
+            "h = ${6:h}",
+            "$0",
+            ""
+        ],
+        "description": "General meter"
+    },
+
+    "MeterImage": {
+        "prefix": "meterimage",
+        "body": [
+            "[${1:name}]",
+            "meter = Image",
+            "imageName = ${2:imagePath}",
+            "imageAlpha = ${3:0-255}",
+            "greyScale = ${4|0,1|}",
+            "imageTint = ${5|0,1|}",
+            "x = ${6:x}",
+            "y = ${7:y}",
+            "w = ${8:w}",
+            "h = ${9:h}",
+            "$0",
+            ""
+        ],
+        "description": "Image meter"
+    },
+
+    "SolidColorRgba": {
+        "prefix": "solidColorRGBA",
+        "body": [
+            "solidColor = ${1:red},${2:green},${3:blue},${4:aplha}",
+            "$0"
+        ],
+        "description": "Creates RGBA solid color statement."
+    },
+
+    "SolidColorHex": {
+        "prefix": "solidColorHEX",
+        "body": [
+            "solidColor = #${1:color}",
+            "$0"
+        ],
+        "description": "Creates HEX solid color statement."
+    },
+
+    "MeasureCalc": {
+        "prefix": "measureCALC",
+        "body": [
+            "[${1:name}]",
+            "measure = ${2|Calc,CPU,FreeDiskSpace,Loop,Memory,Net,Plugin,Registry,Script,String,Time,Uptime|}",
+            "dynamicVariables = ${3|0,1|}",
+            "formula = ${4:formula}",
+            "$0"
+        ],
+        "description": "Creates basic calc measure section."
+    },
+
+    "MeasurePercent": {
+        "prefix": "measureMinMax",
+        "body": [
+            "[${1:name}]",
+            "measure = ${2|Calc,CPU,FreeDiskSpace,Loop,Memory,Net,Plugin,Registry,Script,String,Time,Uptime|}",
+            "dynamicVariables = ${3|0,1|}",
+            "formula = ${4:formula}",
+            "minValue = ${5:value}",
+            "maxValue = ${6:value}",
+            "$0"
+        ],
+        "description": "Creates basic min/max value measure section."
+    },
+
+    "ifCondition": {
+        "prefix": "ifCondition",
+        "body": [
+            "ifCondition = ${1:expression}",
+            "${2|ifTrueAction,ifFalseAction|} = ${3:do action}",
+            "$0"
+        ],
+        "description": "Creates contition statement."
+    },
+
+    "ifMatch": {
+        "prefix": "ifMatch",
+        "body": [
+            "ifMatch = ${1:expression}",
+            "${2|ifMatchAction,ifNotMatchAction|} = ${3:do action}",
+            "$0"
+        ],
+        "description": "Creates a regex match statement."
+    },
+
+    "ifAbove": {
+        "prefix": "ifAboveValue",
+        "body": [
+            "ifAboveValue = ${1:expression}",
+            "ifAboveAction = ${2:do action}",
+            "$0"
+        ],
+        "description": "Creates an greater than statement."
+    },
+
+    "ifBelow": {
+        "prefix": "ifBelowValue",
+        "body": [
+            "ifBelowValue = ${1:expression}",
+            "ifBelowAction = ${2:do action}",
+            "$0"
+        ],
+        "description": "Creates a less than statement."
+    },
+
+    "ifEqual": {
+        "prefix": "ifEqualValue",
+        "body": [
+            "ifEqualValue = ${1:expression}",
+            "ifEqualAction = ${2:do action}",
+            "$0"
+        ],
+        "description": "Creates a value equality statement."
+    }
+
+}

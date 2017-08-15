@@ -8,19 +8,24 @@
         "vscode": "^1.12.0"
     },
     "categories": [
-        "Languages"
+        "Languages",
+        "Snippets"
     ],
     "contributes": {
         "languages": [{
             "id": "rainmeter",
-            "aliases": ["rainmeter", "rainmeter"],
-            "extensions": [".ini",".inc"],
+            "aliases": ["Rainmeter", "rainmeter"],
+            "extensions": [".ini", ".inc"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
             "language": "rainmeter",
             "scopeName": "source.rainmeter",
             "path": "./syntaxes/rainmeter.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "rainmeter",
+            "path": "./snippets/rainmeter.json"
         }]
     }
 }
