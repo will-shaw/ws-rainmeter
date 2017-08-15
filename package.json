@@ -1,0 +1,26 @@
+{
+    "name": "ws-rainmeter",
+    "displayName": "Rainmeter",
+    "description": "Syntax Highlighting for Rainmeter configuration files.",
+    "version": "0.0.1",
+    "publisher": "Will-Shaw",
+    "engines": {
+        "vscode": "^1.12.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "rainmeter",
+            "aliases": ["rainmeter", "rainmeter"],
+            "extensions": [".ini",".inc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "rainmeter",
+            "scopeName": "source.rainmeter",
+            "path": "./syntaxes/rainmeter.tmLanguage.json"
+        }]
+    }
+}
