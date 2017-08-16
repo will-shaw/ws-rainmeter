@@ -27,7 +27,7 @@ Adds a few snippets for quick creation of:
 
 (more to be come too)
 
-[GitHub](https://github.com/will-shaw/rainmeter-syntax)
+[GitHub](https://github.com/will-shaw/ws-rainmeter)
 
 ## Release Notes
 
