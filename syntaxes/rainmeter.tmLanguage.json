@@ -28,7 +28,7 @@
                 },
                 {
                     "name": "keyword.operator.rainmeter",
-                    "match": "(=|\\+|\\-|\\?|:)"
+                    "match": "(=|\\+|\\-|\\?|:|>|<)"
                 },
                 {
                     "name": "entity.name.function.rainmeter",
