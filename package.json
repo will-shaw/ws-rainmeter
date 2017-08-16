@@ -11,6 +11,10 @@
         "Languages",
         "Snippets"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/will-shaw/rainmeter-syntax.git"
+    },
     "contributes": {
         "languages": [{
             "id": "rainmeter",
