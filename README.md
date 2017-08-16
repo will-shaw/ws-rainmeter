@@ -5,7 +5,7 @@
 Since there were no existing Rainmeter extensions for Visual Studio Code, I've created one (pretty basic for now) to help.  
 Adds syntax highlighting for Rainmeter keywords, bangs, variables, and sections.  
 
-![Demo](images/demo.gif)  
+![Demo](./images/demo.gif)  
 The theme used in the demo is 'Dracula Official'
 
 Adds a few snippets for quick creation of:
