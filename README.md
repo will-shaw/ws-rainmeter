@@ -9,6 +9,8 @@ Adds syntax highlighting for Rainmeter keywords, bangs, variables, and sections.
 The theme used in the demo is 'Dracula Official'
 
 Adds a few snippets for quick creation of:
+* Rainmeter section
+* Metadata section
 * Measures
     - Min/Max Value
     - Generic
