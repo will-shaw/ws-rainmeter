@@ -1,7 +1,9 @@
 # Change Log
-All notable changes to the "ws-rainmeter" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## 0.2.2
+Adds Custom region folding use: Thanks to [Minervaxcel](https://github.com/Minervaxcel) for the PR
+
+Usage `; #region` and `; #endregion`
 
 ## [Unreleased]
 - Initial release
