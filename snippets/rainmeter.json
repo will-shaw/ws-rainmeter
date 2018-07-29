@@ -73,7 +73,7 @@
     "SolidColorRgba": {
         "prefix": "solidColorRGBA",
         "body": [
-            "solidColor = ${1:red},${2:green},${3:blue},${4:aplha}",
+            "solidColor = ${1:red},${2:green},${3:blue},${4:alpha}",
             "$0"
         ],
         "description": "Creates RGBA solid color statement."
@@ -121,7 +121,7 @@
             "${2|ifTrueAction,ifFalseAction|} = ${3:do action}",
             "$0"
         ],
-        "description": "Creates contition statement."
+        "description": "Creates condition statement."
     },
 
     "ifMatch": {
