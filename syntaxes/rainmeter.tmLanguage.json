@@ -19,6 +19,9 @@
       "include": "#variables"
     },
     {
+      "include": "#nestedvariables"
+    },
+    {
       "include": "#comments"
     }
   ],
@@ -60,7 +63,7 @@
     },
     "entities": {
       "name": "entity.name.type.rainmeter",
-      "begin": "\\[",
+      "begin": "\\[[^#%&\\$]",
       "end": "\\]",
       "patterns": [
         {
@@ -82,6 +85,17 @@
         {
           "name": "constant.numeric.rainmeter",
           "match": "\\d"
+        }
+      ]
+    },
+    "nestedvariables": {
+      "name": "variable.parameter.rainmeter.nested",
+      "begin": "\\[[#%&\\$]",
+      "end": "\\]",
+      "patterns": [
+        {
+          "name": "variable.parameter.rainmeter.nested",
+          "include": "#nestedvariables"
         }
       ]
     },
