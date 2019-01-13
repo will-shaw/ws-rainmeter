@@ -2,7 +2,7 @@
     "name": "ws-rainmeter",
     "displayName": "Rainmeter Support",
     "description": "Unofficial Syntax Highlighting and Snippets for Rainmeter configuration files.",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "publisher": "will-shaw",
     "engines": {
         "vscode": "^1.12.0"

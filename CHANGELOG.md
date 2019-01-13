@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.5
+Added temporary workaround for bang syntax highlighting because.
+The side effect of this workaround is that the bang square bracket is not coloured/italicised.
+
 ## 0.2.4
 Adds support for highlighting Nested Variables. Thanks to [justingallagher](https://github.com/justingallagher) for the PR
 
