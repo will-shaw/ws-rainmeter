@@ -58,6 +58,10 @@
         {
           "name": "variable.parameter.rainmeter",
           "include": "#variables"
+        },
+        {
+          "name": "variable.parameter.rainmeter.nested",
+          "include": "#nestedvariables"
         }
       ]
     },
