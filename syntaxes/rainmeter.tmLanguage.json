@@ -1,10 +1,12 @@
 {
-  "$schema":
-    "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "rainmeter",
   "patterns": [
     {
       "include": "#strings"
+    },
+    {
+      "include": "#bangs"
     },
     {
       "include": "#keywords"
@@ -26,6 +28,17 @@
     }
   ],
   "repository": {
+    "bangs": {
+      "name": "entity.name.function.rainmeter",
+      "begin": "!",
+      "end": "\\s|(?=\\])",
+      "patterns": [
+        {
+          "name": "entity.name.function.rainmeter",
+          "match": "\\w+\\b"
+        }
+      ]
+    },
     "keywords": {
       "patterns": [
         {
@@ -34,11 +47,7 @@
         },
         {
           "name": "keyword.operator.rainmeter",
-          "match": "(=|\\+|\\-|\\?|:|>|<)"
-        },
-        {
-          "name": "entity.name.function.rainmeter",
-          "match": "!\\w+"
+          "match": "[=\\+\\-\\?:><&\\*\\|/]+?"
         },
         {
           "name": "variable.parameter.rainmeter",
@@ -67,20 +76,24 @@
     },
     "entities": {
       "name": "entity.name.type.rainmeter",
-      "begin": "\\[[^!#%&\\$]",
+      "begin": "\\[(?![#$&])",
       "end": "\\]",
       "patterns": [
+        {
+          "name": "entity.name.type.rainmeter",
+          "include": "#bangs"
+        },
         {
           "name": "variable.parameter.rainmeter",
           "include": "#variables"
         },
         {
-          "name": "entity.name.function.rainmeter",
-          "match": "!\\w+"
+          "name": "string.quoted.double.rainmeter",
+          "include": "#strings"
         },
         {
           "name": "string.quoted.double.rainmeter",
-          "include": "#strings"
+          "include": "#nestedvariables"
         }
       ]
     },
@@ -88,7 +101,7 @@
       "patterns": [
         {
           "name": "constant.numeric.rainmeter",
-          "match": "\\d"
+          "match": "(?<!%)\\b\\d*?\\.?\\d+\\b"
         }
       ]
     },

@@ -25,9 +25,6 @@ Adds a few snippets for quick creation of:
     - RGBA
     - HEX
 
-* Custom region folding use: Thanks to [Minervaxcel](https://github.com/Minervaxcel) for the PR
-    - Usage `; #region` and `; #endregion`
-
 I'll happily add PR's; or ideas/issues when I have time and depending on the content.
 
 [GitHub](https://github.com/will-shaw/ws-rainmeter)
