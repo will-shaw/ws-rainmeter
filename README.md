@@ -1,14 +1,24 @@
 # Rainmeter - Syntax Highlighting for VSCode
 
+## Preview
+
+![Preview](./images/preview.png)
+
+## Type Examples
+
+![Type Examples](./images/example.png)
+The theme used in the demo is 'Dracula Official'
+
+## Snippets
+
+![Demo](./images/demo.gif)
+
 ## Features
 
 Since there were no existing Rainmeter extensions for Visual Studio Code, I've created one (pretty basic for now) to help.
 Adds syntax highlighting for Rainmeter keywords, bangs, variables, and sections.
 
-![Demo](./images/demo.gif)
-The theme used in the demo is 'Dracula Official'
-
-Adds a few snippets for quick creation of:
+## Adds a few snippets for quick creation of:
 * Rainmeter section
 * Metadata section
 * Measures

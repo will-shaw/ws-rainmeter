@@ -1,0 +1,79 @@
+{
+  "MeterString": {
+    "prefix": "MeterString",
+    "body": [
+      "[${1:name}]",
+      "antiAlias = ${2|0,1|}",
+      "fontFace = ${3}",
+      "fontSize = ${4}",
+      "fontColor = ${5:red},${6:green},${7:blue},${8:alpha}",
+      "x = ${9}",
+      "y = ${10}",
+      "h = ${11}",
+      "w = ${12}",
+      "",
+      "$0"
+    ],
+    "description": "Common properties you might use for a string meter. All general meter options are valid."
+  },
+
+  "Text": {
+    "prefix": "text",
+    "body": ["text = ${1}", "$0"],
+    "description": "Text to display. If MeasureName is specified, Text will default to the value of the measure."
+  },
+
+  "Prefix": {
+    "prefix": "prefix",
+    "body": ["prefix = ${1}", "$0"],
+    "description": "Text displayed before Text."
+  },
+
+  "Postfix": {
+    "prefix": "postfix",
+    "body": ["postfix = ${1}", "$0"],
+    "description": "Text displayed after Text."
+  },
+
+  "FontWeight": {
+    "prefix": "fontWeight",
+    "body": [
+      "fontWeight = ${1|100,200,300,400,500,600,700,800,900,950|}",
+      "$0"
+    ],
+    "description": "How thin or bold this meter's font should appear. 100 = Hairline, 400 = Normal, 950 = Ultra Black"
+  },
+
+  "ClipString": {
+    "prefix": "clipString",
+    "body": ["clipString = ${1|0,1,2|}", "$0"],
+    "description": "0 = Disabled, 1 = Enabled, 2 = Auto"
+  },
+
+  "StringAlign": {
+    "prefix": "stringAlign",
+    "body": [
+      "stringAlign = ${1|Left,Right,Center,LeftTop,RightTop,CenterTop,LeftCenter,RightCenter,CenterCenter,LeftBottom,RightBottom,CenterBottom|}",
+      "$0"
+    ],
+    "description": "The string will be aligned using the values of the X and or Y settings as the anchor point. So to CenterCenter align a string within a meter with a width and height of 100, set X=50, Y=50 and StringAlign=CenterCenter"
+  },
+
+  "StringStyle": {
+    "prefix": "stringStyle",
+    "body": ["stringStyle = ${1|Normal,Bold,Italic,BoldItalic|}", "$0"],
+    "description": "DEPRECATED: Prefer 'fontWeight' unless you require 'Italic'"
+  },
+
+  "StringCase": {
+    "prefix": "stringCase",
+    "body": ["stringCase = ${1|None,Upper,Lower,Proper|}", "$0"],
+    "description": "Converts the string to a case."
+  },
+
+  "StringEffect": {
+    "prefix": "stringEffect",
+    "body": ["stringEffect = ${1|None,Shadow,Border|}", "$0"],
+    "description": "Converts the string to a case."
+  }
+}

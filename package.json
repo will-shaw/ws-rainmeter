@@ -1,36 +1,52 @@
 {
-    "name": "ws-rainmeter",
-    "displayName": "Rainmeter Support",
-    "description": "Unofficial Syntax Highlighting and Snippets for Rainmeter configuration files.",
-    "version": "0.2.6",
-    "publisher": "will-shaw",
-    "engines": {
-        "vscode": "^1.12.0"
-    },
-    "categories": [
-        "Programming Languages",
-        "Snippets"
+  "name": "ws-rainmeter",
+  "displayName": "Rainmeter Support",
+  "description": "Unofficial Syntax Highlighting and Snippets for Rainmeter configuration files.",
+  "version": "0.2.7",
+  "publisher": "will-shaw",
+  "engines": {
+    "vscode": "^1.12.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/will-shaw/ws-rainmeter.git"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "rainmeter",
+        "aliases": [
+          "Rainmeter",
+          "rainmeter"
+        ],
+        "extensions": [
+          ".ini",
+          ".inc"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "icon": "images/icon.png",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/will-shaw/ws-rainmeter.git"
-    },
-    "contributes": {
-        "languages": [{
-            "id": "rainmeter",
-            "aliases": ["Rainmeter", "rainmeter"],
-            "extensions": [".ini", ".inc"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "rainmeter",
-            "scopeName": "source.rainmeter",
-            "path": "./syntaxes/rainmeter.tmLanguage.json"
-        }],
-        "snippets": [{
-            "language": "rainmeter",
-            "path": "./snippets/rainmeter.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "rainmeter",
+        "scopeName": "source.rainmeter",
+        "path": "./syntaxes/rainmeter.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "rainmeter",
+        "path": "./snippets/rainmeter.json"
+      },
+      {
+        "language": "rainmeter",
+        "path": "./snippets/meters/strings.json"
+      }
+    ]
+  }
 }
