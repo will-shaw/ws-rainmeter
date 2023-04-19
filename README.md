@@ -15,25 +15,28 @@ The theme used in the demo is 'Dracula Official'
 
 ## Features
 
+Provides Document Symbols for sections and fields.
+
 Since there were no existing Rainmeter extensions for Visual Studio Code, I've created one (pretty basic for now) to help.
 Adds syntax highlighting for Rainmeter keywords, bangs, variables, and sections.
 
 ## Adds a few snippets for quick creation of:
-* Rainmeter section
-* Metadata section
-* Measures
-    - Min/Max Value
-    - Generic
-    - IfConditions
-    - IfAbove/Below/Equal
-    - IfMatch Regexp
-* Meters
-    - Image
-    - Generic
-* MeterStyles
-* SolidColor
-    - RGBA
-    - HEX
+
+- Rainmeter section
+- Metadata section
+- Measures
+  - Min/Max Value
+  - Generic
+  - IfConditions
+  - IfAbove/Below/Equal
+  - IfMatch Regexp
+- Meters
+  - Image
+  - Generic
+- MeterStyles
+- SolidColor
+  - RGBA
+  - HEX
 
 I'll happily add PR's; or ideas/issues when I have time and depending on the content.
 
@@ -44,6 +47,6 @@ I'll happily add PR's; or ideas/issues when I have time and depending on the con
 This version adds basic syntax highlighting for Rainmeter .ini and .inc files.
 It also has a small number of snippets to get started.
 
------------------------------------------------------------------------------------------------------------
+---
 
 **Hope it helps!**

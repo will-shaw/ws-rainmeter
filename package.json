@@ -2,15 +2,17 @@
   "name": "ws-rainmeter",
   "displayName": "Rainmeter Support",
   "description": "Unofficial Syntax Highlighting and Snippets for Rainmeter configuration files.",
-  "version": "0.2.7",
+  "version": "0.3.0",
   "publisher": "will-shaw",
   "engines": {
-    "vscode": "^1.12.0"
+    "vscode": "^1.74.0"
   },
   "categories": [
     "Programming Languages",
     "Snippets"
   ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
@@ -48,5 +50,26 @@
         "path": "./snippets/meters/strings.json"
       }
     ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.77.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.36.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5",
+    "@vscode/test-electron": "^2.3.0"
   }
 }

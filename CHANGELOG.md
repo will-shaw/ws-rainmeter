@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.3.0
+
+Added DocumentSymbolProvider which shows sections and fields. (e.g. `[Rainmeter]`, and `measure=...` respectively).
+
 ## 0.2.7
 
 Added Snippets for most properties of the String meter type.
