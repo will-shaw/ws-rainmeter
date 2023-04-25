@@ -1,15 +1,17 @@
 import { ExtensionContext, languages } from "vscode";
-import { IniDocumentSymbolProvider } from "./DocumentSymbolProvider";
+import { Provider } from "./Provider";
 
 export function activate(context: ExtensionContext) {
+  const provider = new Provider();
+
+  const languageConfig = [
+    { language: "rainmeter", pattern: "**/*.{ini,inc}" },
+    { language: "rainmeter", scheme: "untitled" },
+  ];
+
   context.subscriptions.push(
-    languages.registerDocumentSymbolProvider(
-      [
-        { language: "rainmeter", pattern: "**/*.{ini,inc}" },
-        { language: "rainmeter", scheme: "untitled" },
-      ],
-      new IniDocumentSymbolProvider()
-    )
+    languages.registerDocumentSymbolProvider(languageConfig, provider),
+    languages.registerFoldingRangeProvider(languageConfig, provider)
   );
 }
 

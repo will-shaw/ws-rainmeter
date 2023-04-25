@@ -2,6 +2,9 @@ import {
   CancellationToken,
   DocumentSymbol,
   DocumentSymbolProvider,
+  FoldingContext,
+  FoldingRange,
+  FoldingRangeProvider,
   Location,
   Position,
   ProviderResult,
@@ -11,9 +14,44 @@ import {
   TextDocument,
 } from "vscode";
 
-export class IniDocumentSymbolProvider implements DocumentSymbolProvider {
+export class Provider implements DocumentSymbolProvider, FoldingRangeProvider {
   sectionRegex = /^\s*\[([^\]]+)\]/;
   fieldRegex = /^\s*([^\[;=]+)\s*=/;
+
+  provideFoldingRanges(
+    document: TextDocument,
+    _context: FoldingContext,
+    token: CancellationToken
+  ): ProviderResult<FoldingRange[]> {
+    const result = [];
+
+    let lastFieldLine = -1;
+
+    for (let i = document.lineCount - 1; i >= 0; i--) {
+      if (token.isCancellationRequested) {
+        break;
+      }
+
+      const { text } = document.lineAt(i);
+
+      const sectionMatch = text.match(this.sectionRegex);
+
+      if (sectionMatch) {
+        result.push(new FoldingRange(i, lastFieldLine));
+        if (lastFieldLine >= 0) {
+          lastFieldLine = -1;
+        }
+      } else {
+        let fieldMatch = text.match(this.fieldRegex);
+
+        if (fieldMatch) {
+          if (lastFieldLine < 0) lastFieldLine = i;
+        }
+      }
+    }
+
+    return result;
+  }
 
   provideDocumentSymbols(
     document: TextDocument,
