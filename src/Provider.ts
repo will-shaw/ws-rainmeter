@@ -36,16 +36,14 @@ export class Provider implements DocumentSymbolProvider, FoldingRangeProvider {
 
       const sectionMatch = text.match(this.sectionRegex);
 
-      if (sectionMatch) {
+      if (sectionMatch && lastFieldLine >= 0) {
         result.push(new FoldingRange(i, lastFieldLine));
-        if (lastFieldLine >= 0) {
-          lastFieldLine = -1;
-        }
+        lastFieldLine = -1;
       } else {
         let fieldMatch = text.match(this.fieldRegex);
 
-        if (fieldMatch) {
-          if (lastFieldLine < 0) lastFieldLine = i;
+        if (fieldMatch && lastFieldLine < 0) {
+          lastFieldLine = i;
         }
       }
     }
@@ -95,7 +93,9 @@ export class Provider implements DocumentSymbolProvider, FoldingRangeProvider {
         let fieldMatch = text.match(this.fieldRegex);
 
         if (fieldMatch) {
-          if (lastFieldLine < 0) lastFieldLine = i;
+          if (lastFieldLine < 0) {
+            lastFieldLine = i;
+          }
           result.push(
             new SymbolInformation(
               fieldMatch[1],
